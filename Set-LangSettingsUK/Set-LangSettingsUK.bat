@@ -1,0 +1,1 @@
+control.exe intl.cpl,, /f:".\LangSettingsUK.xml"

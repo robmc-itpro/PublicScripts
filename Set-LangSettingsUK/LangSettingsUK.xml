@@ -1,0 +1,31 @@
+<gs:GlobalizationServices xmlns:gs="urn:longhornGlobalizationUnattend">
+
+    <!-- user list -->
+    <gs:UserList>
+        <gs:User UserID="Current" CopySettingsToDefaultUserAcct="true" CopySettingsToSystemAcct="true"/>
+    </gs:UserList>
+
+    <!-- GeoID -->
+    <gs:LocationPreferences>
+        <gs:GeoID Value="242"/>
+    </gs:LocationPreferences>
+
+    <!-- UI Language Preferences -->
+    <gs:MUILanguagePreferences>
+        <gs:MUILanguage Value="en-GB"/>
+    </gs:MUILanguagePreferences>
+
+    <!-- system locale -->
+    <gs:SystemLocale Name="en-GB"/>
+
+    <!-- input preferences -->
+    <gs:InputPreferences>
+        <gs:InputLanguageID Action="add" ID="0809:00000809" Default="true"/>
+    </gs:InputPreferences>
+
+    <!-- user locale -->
+    <gs:UserLocale>
+        <gs:Locale Name="en-GB" SetAsCurrent="true" ResetAllSettings="false"/>
+    </gs:UserLocale>
+
+</gs:GlobalizationServices>
