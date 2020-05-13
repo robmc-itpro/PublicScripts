@@ -12,7 +12,7 @@
 
     <!-- UI Language Preferences -->
     <gs:MUILanguagePreferences>
-        <gs:MUILanguage Value="en-GB"/>
+        <gs:MUILanguage Value="en-US"/>
     </gs:MUILanguagePreferences>
 
     <!-- system locale -->
