@@ -28,9 +28,10 @@ $AutomationAccountName = 'WVD-UK-AutomationAccount'
 $RunbookName = 'WVDAutoStartRunbook'
 $AzureContext = Get-AzSubscription -SubscriptionId $ServicePrincipalConnection.SubscriptionID
 $params = @{"AzureResourceGroup"="WVD-UK"}
+$WaitSeconds = 14400
 
 # Disable the Auto-Scaling Logic App
-Write-Out "Disabling WVD Auto-Scaling... "
+Write-Output "Disabling WVD Auto-Scaling... "
 Set-AzureRMLogicApp -ResourceGroupName $AutomationResourceGroup -Name $LogicAppName -state Disabled
 
 # Start All WVD Hosts
@@ -42,10 +43,10 @@ Start-AzAutomationRunbook `
     -AzContext $AzureContext `
     –Parameters $params –Wait
 
-# Wait for 4 Hours
-Write-Out "Sleeping for 4 hours... "
-start-sleep 14400 -seconds
+# Go to sleep
+Write-Output "Sleeping for '$($WaitSeconds)' seconds... "
+start-sleep $WaitSeconds -seconds
 
 # Re-enable the Auto-Scaling Logic App 
-Write-Out "Re-enabling WVD Auto-Scaling... "
+Write-Output "Re-enabling WVD Auto-Scaling... "
 Set-AzureRMLogicApp -ResourceGroupName $AutomationResourceGroup -Name $LogicAppName -state Enabled
