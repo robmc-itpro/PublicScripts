@@ -42,9 +42,9 @@ Start-AzAutomationRunbook `
     -AzContext $AzureContext `
     –Parameters $params –Wait
 
-# Wait for 2 Hours
-Write-Out "Sleeping for 2 hours... "
-start-sleep 7200 -seconds
+# Wait for 4 Hours
+Write-Out "Sleeping for 4 hours... "
+start-sleep 14400 -seconds
 
 # Re-enable the Auto-Scaling Logic App 
 Write-Out "Re-enabling WVD Auto-Scaling... "
