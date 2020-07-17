@@ -26,7 +26,6 @@ $AutomationResourceGroup = 'WVD-UK-Automation'
 $LogicAppName = 'WVD-UK-HP001_Autoscale_Scheduler'
 $AutomationAccountName = 'WVD-UK-AutomationAccount'
 $RunbookName = 'WVDAutoStartRunbook'
-$AzureContext = Get-AzureRMSubscription -SubscriptionId $ServicePrincipalConnection.SubscriptionID
 $params = @{"AzureResourceGroup"="WVD-UK"}
 $WaitSeconds = 14400
 
