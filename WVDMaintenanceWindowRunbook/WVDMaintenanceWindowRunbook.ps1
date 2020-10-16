@@ -28,7 +28,7 @@ $AutomationAccountName = 'WVD-UK-AutomationAccount'
 $RunbookName = 'WVDAutoStartRunbook'
 $AzureContext = Select-AzureRmSubscription -SubscriptionId $ServicePrincipalConnection.SubscriptionID
 $params = @{"AzureResourceGroup"="WVD-UK"}
-$WaitSeconds = 14400
+$WaitSeconds = 10200
 
 # Disable the Auto-Scaling Logic App
 Write-Output "Disabling WVD Auto-Scaling... "
